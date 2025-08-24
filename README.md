@@ -1,7 +1,7 @@
 # HACKATHON-1
 I participated in 24 hrs Hackathon, in which I built a text to image AI image generator using unsplash API.
 
-This is the element by element explanation generateImage() function ------->
+This is the element by element explanation of generateImage() function ------->
 <img width="2093" height="1059" alt="New Microsoft PowerPoint Presentation - PowerPoint 24-08-2025 09_17_56" src="https://github.com/user-attachments/assets/25dea7e0-16cb-4b5c-a16b-8a3dd07c9ebd" />
 
 SUMMARY:--------------------->
