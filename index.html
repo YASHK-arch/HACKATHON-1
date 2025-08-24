@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI IMAGE GENERATOR</title>
+
+    <!-- Style CSS for the ai generator -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-------Icons font-awesome libraries-------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Style CSS for navbar and textual content-->
+<!---External font libraries from Google fonts used-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-size: 18px;
+}
+
+/*  NAVBAR STYLE CSS */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #114147;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+span{float:right;}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-style: 
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* Font style CSS from Google fonts*/
+p{font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 10px;
+}
+
+/*Stylesheet of form and main page were colliding so I iframed the form.html in the index.html file---------*/
+iframe{
+margin: 10px;
+padding:1px;
+}
+
+.feedback{
+    margin: 10px;
+    padding-left: 15px;
+}
+
+
+/*  Alert info message style CSS*/
+i{ margin:10px;
+    margin-left: 0px;
+   font-style: italic;
+   font-size: 15px;
+   
+   
+}
+q{
+      border:#111;
+      border-style: dotted;
+      padding: 10px;
+      margin-left: 300px;
+      
+
+}
+
+/*Style CSS for Social Media icons*/
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white; 
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+.fa-github {
+  background: #20cb59;
+  color: rgb(14, 1, 1);
+}
+
+</style>
+</head>
+
+<body>
+
+                  <!--------------------------------NAVBAR--------------------------------------->
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Git-repo</a></li>
+  <li><a href="#message">Feedback</a></li>
+  <span><li><a href="#social">Follow Me</a></li></span>
+</ul>
+
+                   <!--------------------------------AI IMAGE GENERATOR WINDOW-------------------------->
+    <div class="main">
+        <div class="container">
+            <div class="header">
+                <h1 id="home">AI Image Generator</h1>
+                <p>Convert your text to image using this AI Image Generator. This app will generate 4 images based on your input. </p>
+                <div class="searchBox">
+                    <input class="searchInput" type="text" name="" placeholder="Describe your image...">
+                    <button class="searchButton" onclick="generateImage()">
+
+                  <!-----The line creates a text input box where the user can type a query.
+
+class="searchInput" → used to style the input and also select it with JavaScript.
+Example:
+
+/////document.querySelector('.searchInput').value;/////////   -------> <!---written in script.js file--
+                     |
+                     |
+                    .|.
+                     .
+retrieves the text the user typed.
+
+type="text" → makes it a plain text field.
+
+name="" → usually used when sending data in forms, but here it’s empty since you’re not submitting via <form>.
+
+placeholder="Describe your image..." → shows faint text inside the box until the user types something.
+MORE DETAILS ON generateImage() is attached in the repository----->
+
+
+                       <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                            <g clip-path="url(#clip0_2_17)">
+                                <g filter="url(#filter0_d_2_17)">
+                                    <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                                </g>
+                            </g>
+
+                            <defs>
+                                <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                    <feOffset dy="4"></feOffset>
+                                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                    <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+                                </filter>
+                                <clipPath id="clip0_2_17">
+                                    <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                    <!-----Above is the svg icon link code structure from w3.org library for the search button icon----->
+                </div>
+            </div>
+<!-------------------------------------------Default Showcase image cards----------------------------->
+            <section class="image-gallery">
+                <div class="img-card"><img src="images/img-5.jpg" alt="image"></div>
+                <div class="img-card"><img src="images/img-6.jpg" alt="image"></div>
+                <div class="img-card"><img src="images/img-7.jpg" alt="image"></div>
+                <div class="img-card"><img src="images/img-8.png" alt="image"></div>
+            </section>
+        </div>
+    </div>
+    <br><br>
+    <div><p class="warning"><q><i class="fa-solid fa-triangle-exclamation" style="color:rgb(255, 123, 0);">  NOTE !</i> This project is in its Beta version, you may get some unrelated images on using complicated prompts,try to give simpler prompts.</q></p></div>
+    <br>
+    <div class="feedback" id="message">As our software is new and may contain some unexpected outputs,<br>so we love to hear your <mark>feedbacks! </mark></div>
+ <iframe src="form.html" width="1400" height="500" style="border:1px dashed rgb(167, 34, 34);"></iframe>
+
+    <div style="text-align: center;" id="social">
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-github"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+
+    </div>
+<br>
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
